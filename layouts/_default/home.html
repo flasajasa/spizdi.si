@@ -1,0 +1,62 @@
+{{ define "main" }}
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            {{ if site.Params.heroTitleLine1 }}
+              <span class="hero-title-line1">{{ site.Params.heroTitleLine1 }}</span>
+            {{ else }}
+              <span class="hero-title-line1">{{ site.Title }}</span>
+            {{ end }}
+            {{ if site.Params.heroTitleLine2 }}
+              <span class="hero-title-line2">{{ site.Params.heroTitleLine2 }}</span>
+            {{ end }}
+          </h1>
+          {{ if site.Params.description }}
+            <p class="hero-subtitle">&gt; {{ site.Params.description }}</p>
+          {{ else if site.Description }}
+            <p class="hero-subtitle">&gt; {{ site.Description }}</p>
+          {{ end }}
+        </div>
+        <div class="hero-image">
+          {{ $avatarUrl := site.Params.avatar.home.url | default site.Params.avatar.url }}
+          {{ $avatarAsset := site.Params.avatar.home.assetPath | default site.Params.avatar.assetPath }}
+          {{ $enableResize := site.Params.avatar.home.enableResize | default site.Params.avatar.enableResize | default false }}
+
+          {{ if $avatarUrl }}
+            <img src="{{ $avatarUrl }}" alt="{{ site.Title }}" class="hero-logo">
+          {{ else if $avatarAsset }}
+            {{ with resources.Get $avatarAsset }}
+              {{ if $enableResize }}
+                {{ with .Resize "512x" }}
+                  <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" class="hero-logo">
+                {{ end }}
+              {{ else }}
+                <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" class="hero-logo">
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="home-container">
+    <!-- Brand Introduction -->
+    <section class="posts-section">
+      <div class="about-content-full" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 2em;">
+          An independent accessories brand for people who don't want attention, don't owe explanations, and don't need to perform friendliness.
+        </p>
+        <p style="margin-bottom: 2em;">
+          <strong>Online store coming soon.</strong>
+        </p>
+        <p>
+          <a href="/about/" style="text-decoration: underline;">Learn more about us</a>
+        </p>
+      </div>
+    </section>
+  </div>
+{{ end }}

@@ -1,0 +1,47 @@
+/* Custom styles for spizdi.si */
+
+/* Red color scheme override */
+:root {
+  --accent-primary: #dc2626;
+  --accent-mid-purple: #ef4444;
+  --accent-light-purple: #f87171;
+  --accent-secondary: #b91c1c;
+  --accent-hover: #ef4444;
+
+  --accent-primary-rgba-03: rgba(220, 38, 38, 0.3);
+  --accent-primary-rgba-05: rgba(220, 38, 38, 0.5);
+  --accent-light-purple-rgba-01: rgba(248, 113, 113, 0.1);
+  --accent-light-purple-rgba-03: rgba(248, 113, 113, 0.3);
+  --accent-mid-purple-rgba-05: rgba(239, 68, 68, 0.05);
+  --accent-mid-purple-rgba-01: rgba(239, 68, 68, 0.1);
+  --accent-mid-purple-rgba-02: rgba(239, 68, 68, 0.2);
+
+  --tag-color: var(--accent-light-purple);
+}
+
+/* Keep borders neutral */
+.header-nav {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.site-footer {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Links same color as text */
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+.about-content-full ul {
+  padding-left: 1.5em;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-content-full ul li {
+  margin-bottom: 0.5em;
+}

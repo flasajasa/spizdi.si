@@ -1,0 +1,17 @@
+<nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="{{ "/" | relLangURL }}" class="logo-link" aria-label="Home - {{ site.Title }}">
+        {{ with resources.Get "images/text_logo.png" }}
+          <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" style="height: 1.5em; width: auto; vertical-align: middle;">
+        {{ else }}
+          {{ site.Title }}
+        {{ end }}
+      </a>
+    </div>
+
+    <div class="header-menu">
+      {{ partial "menu.html" . }}
+    </div>
+  </div>
+</nav>
