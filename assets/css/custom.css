@@ -1,20 +1,20 @@
 /* Custom styles for spizdi.si */
 
-/* Red color scheme override */
+/* Using original theme colors (purple) */
 :root {
-  --accent-primary: #dc2626;
-  --accent-mid-purple: #ef4444;
-  --accent-light-purple: #f87171;
-  --accent-secondary: #b91c1c;
-  --accent-hover: #ef4444;
+  --accent-primary: #b063e0;
+  --accent-mid-purple: #c485f6;
+  --accent-light-purple: #dbabff;
+  --accent-secondary: #00ffff;
+  --accent-hover: #c485f6;
 
-  --accent-primary-rgba-03: rgba(220, 38, 38, 0.3);
-  --accent-primary-rgba-05: rgba(220, 38, 38, 0.5);
-  --accent-light-purple-rgba-01: rgba(248, 113, 113, 0.1);
-  --accent-light-purple-rgba-03: rgba(248, 113, 113, 0.3);
-  --accent-mid-purple-rgba-05: rgba(239, 68, 68, 0.05);
-  --accent-mid-purple-rgba-01: rgba(239, 68, 68, 0.1);
-  --accent-mid-purple-rgba-02: rgba(239, 68, 68, 0.2);
+  --accent-primary-rgba-03: rgba(176, 99, 224, 0.3);
+  --accent-primary-rgba-05: rgba(176, 99, 224, 0.5);
+  --accent-light-purple-rgba-01: rgba(219, 171, 255, 0.1);
+  --accent-light-purple-rgba-03: rgba(219, 171, 255, 0.3);
+  --accent-mid-purple-rgba-05: rgba(196, 133, 246, 0.05);
+  --accent-mid-purple-rgba-01: rgba(196, 133, 246, 0.1);
+  --accent-mid-purple-rgba-02: rgba(196, 133, 246, 0.2);
 
   --tag-color: var(--accent-light-purple);
 }
@@ -22,6 +22,7 @@
 /* Keep borders neutral */
 .header-nav {
   border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  padding: var(--spacing-sm) 0 !important;
 }
 
 .site-footer {

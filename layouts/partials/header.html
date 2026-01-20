@@ -3,7 +3,7 @@
     <div class="header-logo">
       <a href="{{ "/" | relLangURL }}" class="logo-link" aria-label="Home - {{ site.Title }}">
         {{ with resources.Get "images/text_logo.png" }}
-          <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" style="height: 1.5em; width: auto; vertical-align: middle;">
+          <img src="{{ .RelPermalink }}" alt="{{ site.Title }}" style="height: 2.5em; width: auto; vertical-align: middle;">
         {{ else }}
           {{ site.Title }}
         {{ end }}
